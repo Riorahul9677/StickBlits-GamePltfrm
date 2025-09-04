@@ -1,0 +1,119 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* StickBlitz Design System - Clean Gaming Theme */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+@layer base {
+  :root {
+    /* StickBlitz Color Palette - Clean & Professional */
+    --night-black: 222 17% 8%;
+    --dark-gray: 222 14% 12%;
+    --medium-gray: 222 10% 20%;
+    --light-gray: 222 8% 70%;
+    --off-white: 0 0% 98%;
+    --accent-yellow: 45 100% 55%;
+    --accent-red: 0 84% 60%;
+    
+    /* Base Theme Colors */
+    --background: var(--night-black);
+    --foreground: var(--off-white);
+    
+    --card: var(--dark-gray);
+    --card-foreground: var(--off-white);
+    --card-border: var(--medium-gray);
+    
+    --popover: var(--dark-gray);
+    --popover-foreground: var(--off-white);
+    
+    --primary: var(--accent-yellow);
+    --primary-foreground: var(--night-black);
+    
+    --secondary: var(--medium-gray);
+    --secondary-foreground: var(--off-white);
+    
+    --accent: var(--accent-red);
+    --accent-foreground: var(--off-white);
+    
+    --muted: var(--medium-gray);
+    --muted-foreground: var(--light-gray);
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: var(--off-white);
+    
+    --border: var(--medium-gray);
+    --input: var(--dark-gray);
+    --ring: var(--accent-yellow);
+    
+    /* Typography */
+    --font-sans: 'Inter', system-ui, sans-serif;
+    
+    /* Spacing & Sizing */
+    --radius: 0.375rem;
+    --radius-lg: 0.5rem;
+    --section-padding: 3rem;
+    --container-max: 85rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer components {
+  /* StickBlitz Component Styles - Clean Gaming Theme */
+  .primary-button {
+    @apply bg-primary text-primary-foreground font-semibold px-6 py-3 rounded-md;
+    @apply transition-all duration-200 hover:bg-primary/90;
+    font-family: var(--font-sans);
+  }
+  
+  .secondary-button {
+    @apply border border-primary text-primary bg-transparent font-semibold px-6 py-3 rounded-md;
+    @apply transition-all duration-200 hover:bg-primary hover:text-primary-foreground;
+    font-family: var(--font-sans);
+  }
+  
+  .game-card {
+    @apply bg-card border border-card-border rounded-lg overflow-hidden;
+    @apply transition-all duration-200 hover:border-primary/50;
+  }
+  
+  .news-card {
+    @apply bg-card border border-card-border rounded-lg overflow-hidden;
+    @apply transition-all duration-200 hover:border-primary/30;
+  }
+  
+  .section-container {
+    @apply max-w-[var(--container-max)] mx-auto px-6 lg:px-8;
+  }
+  
+  .section-padding {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
